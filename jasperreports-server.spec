@@ -4,7 +4,7 @@
 %global jrs_name jasperreports-server
 
 Name: jasperreports-server
-Version: 4.7.0
+Version: 5.2.0
 Release: 1
 License: AGPLv3
 Summary: %{product_name}
@@ -47,5 +47,8 @@ cp -r %{name}-cp-%{version}-bin/* %{buildroot}%{_datadir}/%{name}
 %{_datadir}/%{name}
 
 %changelog
+* Tue Sep 24 2013 Yaniv Dary <ydary@redhat.com> - 5.2.0
+Update to 5.2.0.
+
 * Sun Jun 10 2012 Yaniv Dary <ydary@redhat.com> - 4.7.0
 - inital commit
