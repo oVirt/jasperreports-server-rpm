@@ -13,6 +13,7 @@ URL: http://community.jaspersoft.com
 BuildArchitectures: noarch
 Source: http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20%{version}/%{name}-cp-%{version}-bin.zip
 
+AutoReqProv: no
 BuildRequires: java-1.7.0-openjdk-devel
 Requires: bash
 Requires: java
