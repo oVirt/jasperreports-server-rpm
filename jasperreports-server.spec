@@ -4,7 +4,7 @@
 %global jrs_name jasperreports-server
 
 Name: jasperreports-server
-Version: 5.2.0
+Version: 5.5.0
 Release: 1
 License: AGPLv3
 Summary: %{product_name}
