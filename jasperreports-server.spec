@@ -5,13 +5,13 @@
 
 Name: jasperreports-server
 Version: 5.5.0
-Release: 1
+Release: 2%{?dist}
 License: AGPLv3
 Summary: %{product_name}
 Group: Virtualization/Management
 URL: http://community.jaspersoft.com
 BuildArchitectures: noarch
-Source: http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20%{version}/%{name}-cp-%{version}-bin.zip
+Source: http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%20%{version}/%{name}-cp-%{version}-bin.zip
 
 AutoReqProv: no
 BuildRequires: java-1.7.0-openjdk-devel
@@ -39,6 +39,8 @@ dashboards.
 %prep
 %setup -c -q
 
+%build
+
 %install
 install -d %{buildroot}%{_datadir}/%{name}
 cp -r %{name}-cp-%{version}-bin/* %{buildroot}%{_datadir}/%{name}
@@ -48,8 +50,16 @@ cp -r %{name}-cp-%{version}-bin/* %{buildroot}%{_datadir}/%{name}
 %{_datadir}/%{name}
 
 %changelog
+
+* Fri Dec 20 2013 Sandro Bonazzola <sbonazzo@redhat.com> - 5.5.0-2
+- Fixed W: no-build-section
+- Fixed W: invalid-url
+
+* Wed Nov 13 2013 Yaniv Dary <ydary@redhat.com> - 5.5.0-1
+- Update to 5.5.0.
+
 * Tue Sep 24 2013 Yaniv Dary <ydary@redhat.com> - 5.2.0
-Update to 5.2.0.
+- Update to 5.2.0.
 
 * Sun Jun 10 2012 Yaniv Dary <ydary@redhat.com> - 4.7.0
 - inital commit
