@@ -2,7 +2,7 @@
 
 Name:		jasperreports-server
 Version:	5.5.0
-Release:	3%{?dist}
+Release:	4%{?dist}
 License:	AGPLv3
 Summary:	JasperReports Server
 URL:		http://community.jaspersoft.com
@@ -15,17 +15,6 @@ AutoReqProv:	no
 BuildRequires:	java-1.7.0-openjdk-devel
 Requires:	bash
 Requires:	java
-Requires:	postgresql-jdbc
-Requires:	postgresql-server >= 8.4.7
-Requires:	postgresql-contrib >= 8.4.7
-# Require JBoss EAP 6:
-Requires:	jboss-annotations-1.1-api
-Requires:	jboss-ejb-3.1-api
-Requires:	jboss-logging
-Requires:	jboss-servlet-3.0-api
-Requires:	jboss-logging
-Requires:	jboss-as >= 7.1.1
-Requires:	jboss-interceptors-1.1-api
 
 %description
 JasperReports Server is a powerful, yet flexible and
@@ -50,6 +39,10 @@ cp -r %{name}-cp-%{version}-bin/* %{buildroot}%{_datadir}/%{name}
 %{_datadir}/%{name}
 
 %changelog
+* Tue Jan 16 2014 Sandro Bonazzola <sbonazzo@redhat.com> - 5.5.0-4
+- Dropped application server and db dependencies as we are just repackaging the
+  Jasper .zip distribution, which is application server independent.
+
 * Thu Jan 16 2014 Alon Bar-Lev <alonbl@redhat.com> - 5.5.0-3
 - Fix bugs in jasper build system.
 
