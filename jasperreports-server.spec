@@ -1,27 +1,27 @@
-Name: jasperreports-server
-Version: 5.5.0
-Release: 2%{?dist}
-License: AGPLv3
-Summary: JasperReports Server
-URL: http://community.jaspersoft.com
-BuildArch: noarch
-Source: http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%20%{version}/%{name}-cp-%{version}-bin.zip
+Name:		jasperreports-server
+Version:	5.5.0
+Release:	2%{?dist}
+License:	AGPLv3
+Summary:	JasperReports Server
+URL:		http://community.jaspersoft.com
+BuildArch:	noarch
+Source:		http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%20%{version}/%{name}-cp-%{version}-bin.zip
 
-AutoReqProv: no
-BuildRequires: java-1.7.0-openjdk-devel
-Requires: bash
-Requires: java
-Requires: postgresql-jdbc
-Requires: postgresql-server >= 8.4.7
-Requires: postgresql-contrib >= 8.4.7
+AutoReqProv:	no
+BuildRequires:	java-1.7.0-openjdk-devel
+Requires:	bash
+Requires:	java
+Requires:	postgresql-jdbc
+Requires:	postgresql-server >= 8.4.7
+Requires:	postgresql-contrib >= 8.4.7
 # Require JBoss EAP 6:
-Requires: jboss-annotations-1.1-api
-Requires: jboss-ejb-3.1-api
-Requires: jboss-logging
-Requires: jboss-servlet-3.0-api
-Requires: jboss-logging
-Requires: jboss-as >= 7.1.1
-Requires: jboss-interceptors-1.1-api
+Requires:	jboss-annotations-1.1-api
+Requires:	jboss-ejb-3.1-api
+Requires:	jboss-logging
+Requires:	jboss-servlet-3.0-api
+Requires:	jboss-logging
+Requires:	jboss-as >= 7.1.1
+Requires:	jboss-interceptors-1.1-api
 
 %description
 JasperReports Server is a powerful, yet flexible and
