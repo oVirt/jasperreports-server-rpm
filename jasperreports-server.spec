@@ -1,16 +1,10 @@
-%global product_description JasperReports Server
-%global install_poms 1
-
-%global jrs_name jasperreports-server
-
 Name: jasperreports-server
 Version: 5.5.0
 Release: 2%{?dist}
 License: AGPLv3
-Summary: %{product_name}
-Group: Virtualization/Management
+Summary: JasperReports Server
 URL: http://community.jaspersoft.com
-BuildArchitectures: noarch
+BuildArch: noarch
 Source: http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%20%{version}/%{name}-cp-%{version}-bin.zip
 
 AutoReqProv: no
@@ -30,7 +24,7 @@ Requires: jboss-as >= 7.1.1
 Requires: jboss-interceptors-1.1-api
 
 %description
-%{product_description} is a powerful, yet flexible and
+JasperReports Server is a powerful, yet flexible and
 lightweight reporting server. Generate, organize, secure,
 and deliver interactive reports and dashboards to users.
 Allow non-technical users to build their own reports and
