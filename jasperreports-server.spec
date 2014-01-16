@@ -1,3 +1,5 @@
+%global __jar_repack 0
+
 Name:		jasperreports-server
 Version:	5.5.0
 Release:	2%{?dist}
