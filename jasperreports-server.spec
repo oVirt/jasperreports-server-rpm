@@ -39,7 +39,7 @@ cp -r %{name}-cp-%{version}-bin/* %{buildroot}%{_datadir}/%{name}
 %{_datadir}/%{name}
 
 %changelog
-* Tue Jan 16 2014 Sandro Bonazzola <sbonazzo@redhat.com> - 5.5.0-4
+* Thu Jan 16 2014 Sandro Bonazzola <sbonazzo@redhat.com> - 5.5.0-4
 - Dropped application server and db dependencies as we are just repackaging the
   Jasper .zip distribution, which is application server independent.
 
