@@ -2,7 +2,7 @@
 
 Name:		jasperreports-server
 Version:	5.5.0
-Release:	5%{?dist}
+Release:	6%{?dist}
 License:	AGPLv3
 Summary:	JasperReports Server
 URL:		http://community.jaspersoft.com
@@ -11,6 +11,8 @@ Source:		http://downloads.sourceforge.net/project/jasperserver/JasperServer/Jasp
 Patch0:		%{name}-%{version}-additional-config.patch
 Patch1:		%{name}-%{version}-install_resources.patch
 Patch2:		%{name}-%{version}-write-own.patch
+Patch3:		%{name}-%{version}-ANT_OPTS.patch
+Patch4:		%{name}-%{version}-java.io.tmpdir.patch
 
 AutoReqProv:	no
 BuildRequires:	java-1.7.0-openjdk-devel
@@ -29,6 +31,8 @@ dashboards.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
 
@@ -41,6 +45,10 @@ cp -r %{name}-cp-%{version}-bin/* %{buildroot}%{_datadir}/%{name}
 %{_datadir}/%{name}
 
 %changelog
+* Wed Feb 5 2014 Alon Bar-Lev <alonbl@redhat.com> - 5.5.0-6
+- Make jasper respect ANT_OPTS.
+- Make jasper delegate java.io.tmpdir to sub processes.
+
 * Tue Jan 28 2014 Alon Bar-Lev <alonbl@redhat.com> - 5.5.0-5
 - Prevent jasper build to modify files at /usr.
 
